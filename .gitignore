@@ -6,3 +6,4 @@ chatbot_env/
 results/
 checkpoint-*/
 .DS_Store
+emotion_model_v2/model.safetensors
