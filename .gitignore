@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+venv/
+chatbot_env/
+results/
+checkpoint-*/
+.DS_Store
