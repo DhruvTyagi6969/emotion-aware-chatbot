@@ -1,6 +1,6 @@
 streamlit
-torch==2.2.2
-transformers==4.41.2
+torch
+transformers
 scikit-learn
 pandas
 numpy
