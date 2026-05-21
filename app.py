@@ -214,11 +214,20 @@ NEGATIVE_EMOTIONS = {"sadness", "anger", "fear", "disgust"}
 # ───────────────────────── LOAD MODELS ─────────────────────────────────────────
 @st.cache_resource
 def load_emotion_model():
-    '''Load YOUR fine-tuned RoBERTa from emotion_model_v2'''
-    path = "./emotion_model_v2"
-    tokenizer = AutoTokenizer.from_pretrained(path)
-    model     = AutoModelForSequenceClassification.from_pretrained(path)
+
+    model_name = "DhruvTyagi/emotion-aware-chatbot-model"
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_name,
+        use_fast=False
+    )
+
+    model = AutoModelForSequenceClassification.from_pretrained(
+        model_name
+    )
+
     model.eval()
+
     return tokenizer, model
 
 @st.cache_resource
